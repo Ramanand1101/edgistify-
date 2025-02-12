@@ -3,6 +3,11 @@
 ## Overview
 This project is a backend API built with Node.js and Express, providing authentication, product management, cart operations, and order processing functionalities.
 
+- **Frontend:** [https://edgistify-7adm.vercel.app/](https://edgistify-7adm.vercel.app/)  
+- **Backend:** [https://edgistify-project.vercel.app/](https://edgistify-project.vercel.app/)  
+
+Let me know if you need help with debugging, API integration, or any improvements! 🚀
+
 ## Features
 - **User Authentication** (Register, Login)
 - **Product Management** (Add, Bulk Add)
