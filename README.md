@@ -1,4 +1,4 @@
-# Edgistify Backend API
+# Edgistify API
 
 ## Overview
 This project is a backend API built with Node.js and Express, providing authentication, product management, cart operations, and order processing functionalities.
