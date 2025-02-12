@@ -9,62 +9,63 @@ const Navbar: React.FC = () => {
   const { cartItems } = useCart();
 
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <img
-                className="h-5 w-auto"
-                src="https://www.edgistify.com/favicon.png"
-                alt="Logo"
-              />
+    <nav className="bg-gradient-to-r from-blue-100 to-indigo-200 shadow-md">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4">
+        <div className="flex justify-between items-center">
+          {/* Left Section - Logo & Links */}
+          <div className="flex items-center space-x-8">
+            <Link to="/" className="text-gray-900 text-xl font-bold">
+              E-Commerce
             </Link>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <div className="hidden sm:flex space-x-6">
               <Link
                 to="/"
-                className="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-indigo-500 text-sm font-medium"
+                className="text-gray-700 hover:text-gray-900 transition duration-200 text-sm font-semibold"
               >
                 Home
               </Link>
               <Link
                 to="/products"
-                className="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-indigo-500 text-sm font-medium"
+                className="text-gray-700 hover:text-gray-900 transition duration-200 text-sm font-semibold"
               >
                 Products
               </Link>
               <Link
                 to="/orders"
-                className="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-indigo-500 text-sm font-medium"
+                className="text-gray-700 hover:text-gray-900 transition duration-200 text-sm font-semibold"
               >
                 My Orders
               </Link>
             </div>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:items-center">
+
+          {/* Right Section - Cart & Auth */}
+          <div className="flex items-center space-x-6">
+            {/* Cart Icon */}
             <Link
               to="/cart"
-              className="p-1 mr-3 relative rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="relative text-gray-700 hover:text-gray-900 transition duration-200"
             >
-              <span className="sr-only">View cart</span>
-              <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+              <ShoppingCartIcon className="h-7 w-7" />
               {cartItems.length > 0 && (
-                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                <span className="absolute -top-2 -right-2 flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 rounded-full shadow-md">
                   {cartItems.length}
                 </span>
               )}
             </Link>
+
+            {/* Auth Buttons */}
             {isAuthenticated ? (
               <button
                 onClick={logout}
-                className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="px-4 py-2 text-sm font-medium text-white bg-red-400 hover:bg-red-500 transition duration-200 rounded-lg shadow-md"
               >
                 Logout
               </button>
             ) : (
               <Link
                 to="/auth"
-                className="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="px-4 py-2 text-sm font-medium text-white bg-green-400 hover:bg-green-500 transition duration-200 rounded-lg shadow-md"
               >
                 Login / Register
               </Link>
