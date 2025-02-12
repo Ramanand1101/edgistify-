@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
           <div className="flex">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img
-                className="h-8 w-auto"
+                className="h-5 w-auto"
                 src="https://www.edgistify.com/favicon.png"
                 alt="Logo"
               />
