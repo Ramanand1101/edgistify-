@@ -1,1 +1,1 @@
-export const BASE_URL = "https://edgistify-backend.vercel.app";
+export const BASE_URL = "https://edgistify-project.vercel.app";

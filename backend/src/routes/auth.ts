@@ -8,6 +8,7 @@ const router = Router();
 router.post("/register", async (req: Request, res: Response) => {
   try {
     const { fullName, email, password } = req.body;
+    console.log(fullName)
 
     if (!fullName || !email || !password) {
       return res
